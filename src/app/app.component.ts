@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { InfiniteCalendarComponent } from 'ng-infinite-calendar';
+import { ExtDate } from 'extdate';
 
 @Component({
   selector: 'app-root',
