@@ -1,2 +1,30 @@
-<infinite-calendar>
-</infinite-calendar>
+<article>
+  <section class="demo-section">
+    <infinite-calendar
+      [events]="events"
+      (selectDate)="onSelectDate($event)"
+    >
+    </infinite-calendar>
+  </section>
+  <section class="selection-section">
+    <span *ngIf="!selected">
+      No dates selected.
+    </span>
+    <span *ngIf="selected">
+      <h4>Events on {{ selected.date.strftime("%Y-%m-%d") }}</h4>
+      <p *ngIf="selected.events.length <= 0">
+        No events on the day.
+      </p>
+      <ul>
+        <li *ngFor="let event of selected.events">
+          <h5>
+            {{ event.title }}
+          </h5>
+          <p>
+            {{ event.body }}
+          </p>
+        </li>
+      </ul>
+    </span>
+  </section>
+</article>
