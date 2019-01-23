@@ -40,8 +40,13 @@ export class AppComponent {
   ]
 
   selected: ExtDateWithEvent;
+  hovered: ExtDateWithEvent;
 
   onSelectDate(edwe: ExtDateWithEvent) {
     this.selected = edwe;
+  }
+
+  onHoverDate(edwe: ExtDateWithEvent) {
+    this.hovered = edwe;
   }
 }
